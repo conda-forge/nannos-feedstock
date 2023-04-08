@@ -1,5 +1,5 @@
 {% set name = "nannos" %}
-{% set version = "2.5.0" %}
+{% set version = "2.5.2" %}
 
 
 package:
@@ -8,11 +8,11 @@ package:
 
 source:
   url: https://gitlab.com/{{ name }}/{{ name }}/-/archive/v{{ version }}/{{ name }}-v{{ version }}.tar.gz
-  sha256: e1190eef877346c7fa0f3e87ea6c3de6af4bc90f1667ca56611e6b6b1d3b6181
+  sha256: dfd7896b5306ca90ec97d2eddce76b5460be30c9c089e220687e6668cb7290ae
 
 
 build:
-  number: 2
+  number: 0
   script: "{{ PYTHON }} -m pip install . -vv --no-deps"
   skip: true  # [py<36]
 
@@ -40,9 +40,7 @@ requirements:
     - jax           # [not win]
     - jaxlib        # [not win]
     - pyvista
-    - pythreejs
-    - ipyvtklink
-    - panel
+    - trame
     - importlib_metadata   # [py<38]
 
 test:
