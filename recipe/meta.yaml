@@ -41,7 +41,7 @@ requirements:
     - jaxlib        # [not win]
     - pyvista
     - trame
-    - nest_asyncio
+    - nest-asyncio
     - importlib_metadata   # [py<38]
 
 test:
