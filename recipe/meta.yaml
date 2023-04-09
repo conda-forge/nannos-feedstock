@@ -50,7 +50,7 @@ test:
   source_files:
     - test/conda_test.py
   commands:
-    - pytest -svv ./test/conda_test.py
+    - pytest -s -vv ./test/conda_test.py
   requires:
     - pytest
 
