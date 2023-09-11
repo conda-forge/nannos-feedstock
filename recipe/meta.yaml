@@ -1,5 +1,5 @@
 {% set name = "nannos" %}
-{% set version = "2.5.2" %}
+{% set version = "2.5.4" %}
 
 
 package:
@@ -8,11 +8,11 @@ package:
 
 source:
   url: https://gitlab.com/{{ name }}/{{ name }}/-/archive/v{{ version }}/{{ name }}-v{{ version }}.tar.gz
-  sha256: dfd7896b5306ca90ec97d2eddce76b5460be30c9c089e220687e6668cb7290ae
+  sha256: 1756ecd207afdd4b7250cbac1ef8e919463f971ac14d9f9b7f65d42503dd038a
 
 
 build:
-  number: 1
+  number: 0
   script: "{{ PYTHON }} -m pip install . -vv --no-deps"
   skip: true  # [py<36]
 
