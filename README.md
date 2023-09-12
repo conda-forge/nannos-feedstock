@@ -1,11 +1,11 @@
-About nannos
-============
+About nannos-feedstock
+======================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/nannos-feedstock/blob/main/LICENSE.txt)
 
 Home: https://gitlab.com/nannos/nannos
 
 Package license: GPL-3.0-or-later
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/nannos-feedstock/blob/main/LICENSE.txt)
 
 Summary: Fourier Modal Method for multilayer metamaterials
 
