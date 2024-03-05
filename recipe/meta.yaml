@@ -12,7 +12,7 @@ source:
 
 
 build:
-  number: 0
+  number: 1
   script: "{{ PYTHON }} -m pip install . -vv --no-deps"
   skip: true  # [py<36]
 
@@ -40,7 +40,10 @@ requirements:
     - jax           # [not win]
     - jaxlib        # [not win]
     - pyvista
+    - ipywidgets
     - trame
+    - trame-vuetify
+    - trame-vtk
     - nest-asyncio
     - importlib_metadata   # [py<38]
 
