@@ -14,7 +14,7 @@ source:
 build:
   number: 1
   script: "{{ PYTHON }} -m pip install . -vv --no-deps"
-  skip: true  # [py<36]
+  skip: true  # [py<39]
 
 requirements:
   host:
@@ -33,18 +33,18 @@ requirements:
     - psutil
     - ipython
     - nlopt
-    - pytorch       # [not win]
-    - pytorch-cpu   # [cuda_compiler_version == "None" and not win]
-    - pytorch-gpu   # [cuda_compiler_version != "None" and not win]
-    - magma         # [not osx and not win]
-    - jax           # [not win]
-    - jaxlib        # [not win]
+    - pytorch          # [not win]
+    - pytorch-cpu      # [cuda_compiler_version == "None" and not win]
+    - pytorch-gpu      # [cuda_compiler_version != "None" and not win]
+    - magma            # [not osx and not win]
+    - jax              # [not win]
+    - jaxlib           # [cuda_compiler_version == "None" and not win]
+    - jaxlib=*=*cuda*  # [cuda_compiler_version !== "None" and not win]
     - pyvista
     - ipywidgets
     - trame
     - trame-vuetify
     - trame-vtk
-    - nest-asyncio
     - importlib_metadata   # [py<38]
 
 test:
