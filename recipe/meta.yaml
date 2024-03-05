@@ -39,7 +39,7 @@ requirements:
     - magma            # [not osx and not win]
     - jax              # [not win]
     - jaxlib           # [cuda_compiler_version == "None" and not win]
-    - jaxlib=*=*cuda*  # [cuda_compiler_version !== "None" and not win]
+    - jaxlib=*=*cuda*  # [cuda_compiler_version != "None" and not win]
     - pyvista
     - ipywidgets
     - trame
