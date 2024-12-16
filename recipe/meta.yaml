@@ -12,9 +12,9 @@ source:
 
 
 build:
-  number: 3
+  number: 4
   script: "{{ PYTHON }} -m pip install . -vv --no-deps"
-  skip: true  # [py<39]
+  skip: true  # [py<310]
 
 requirements:
   host:
@@ -23,29 +23,28 @@ requirements:
     - setuptools
   run:
     - python
-    - numpy >=1.9, <2
+    - numpy >=1.9
     - scipy >=1.0
-    - autograd >=1.4
-    - matplotlib-base
-    - shapely
-    - joblib
-    - colorlog
-    - psutil
-    - ipython
-    - nlopt
-    - pytorch           # [not win]
+    - autograd >=1.6.2
+    - matplotlib-base >=3.9.2
+    - shapely >=2.0.6
+    - joblib >=1.4.2
+    - colorlog >=6.8.2
+    - psutil >=6.0.0
+    - ipython >=8.27.0
+    - nlopt >=2.8.0
+    - pytorch >=2.4.1   # [not win]
     - pytorch =*=cpu*   # [cuda_compiler_version == "None" and not win] 
     - pytorch =*=cuda*  # [cuda_compiler_version != "None" and not win] 
     - magma             # [not osx and not win]
-    - jax               # [not win]
+    - jax >=0.4.31      # [not win]
     - jaxlib            # [cuda_compiler_version == "None" and not win]
     - jaxlib =*=*cuda*  # [cuda_compiler_version != "None" and not win]
-    - pyvista
-    - ipywidgets
-    - trame
+    - pyvista >=0.44.0
+    - ipywidgets >=8.1.5
+    - trame >=3.6.5
     - trame-vuetify
     - trame-vtk
-    - importlib_metadata   # [py<38]
 
 test:
   imports:
