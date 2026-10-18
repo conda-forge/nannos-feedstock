@@ -12,7 +12,7 @@ source:
 
 
 build:
-  number: 0
+  number: 1
   script: "{{ PYTHON }} -m pip install . -vv --no-deps"
   skip: true  # [py<310]
 
@@ -38,7 +38,7 @@ requirements:
     - pytorch >=2.4.1   # [not win]
     - pytorch =*=cpu*   # [cuda_compiler_version == "None" and not win] 
     - pytorch =*=cuda*  # [cuda_compiler_version != "None" and not win] 
-    - magma             # [not osx and not win]
+    - magma             # [cuda_compiler_version != "None" and not osx and not win]
     - jax >=0.4.31      # [not win]
     - jaxlib            # [cuda_compiler_version == "None" and not win]
     - jaxlib =*=*cuda*  # [cuda_compiler_version != "None" and not win]
