@@ -17,6 +17,8 @@ build:
   skip: true  # [py<310]
 
 requirements:
+  build:
+    - {{ stdlib("c") }}
   host:
     - python
     - pip
