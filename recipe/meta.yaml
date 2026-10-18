@@ -1,5 +1,5 @@
 {% set name = "nannos" %}
-{% set version = "2.6.4" %}
+{% set version = "2.6.5" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://gitlab.com/{{ name }}/{{ name }}/-/archive/v{{ version }}/{{ name }}-v{{ version }}.tar.gz
-  sha256: a67970acc7eb9a342b6119d345f7b68d750d5866749907cf3538882e0eb31360
+  sha256: 64e71e04a77fa5260e1fea825d5c076702d73dcd209c26e7f506ea93f9aeed75
 
 
 build:
@@ -17,6 +17,8 @@ build:
   skip: true  # [py<310]
 
 requirements:
+  build:
+    - {{ stdlib("c") }}
   host:
     - python
     - pip
@@ -45,6 +47,7 @@ requirements:
     - trame >=3.6.5
     - trame-vuetify
     - trame-vtk
+    - trame-pyvista
 
 test:
   imports:
